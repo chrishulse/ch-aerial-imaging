@@ -81,13 +81,21 @@ Showcase properties and businesses with stunning aerial visuals.</p>
 </section>
 
 <script>
-  pannellum.viewer('panorama', {
+
+pannellum.viewer('panorama', {
     type: 'equirectangular',
     panorama: 'assets/pano/park_pano_300ft_auto.jpg',
+
     autoLoad: true,
-    showZoomCtrl: true
-  });
-</script>
+    showZoomCtrl: true,
+
+    hfov: 85,        // 👈 zoom in (fixes curve)
+    pitch: 0,        // 👈 level horizon
+    yaw: 0,
+
+    horizonPitch: 0,
+    horizonRoll: 0
+});</script>
 
 </body>
 </html>
