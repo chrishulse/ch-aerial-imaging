@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.H. Aerial Imaging</title>
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+
+</head>
+
+<body>
+
+<section class="hero">
+
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="drone.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <img src="logo.png" class="logo">
+        <h1>C.H. Aerial Imaging</h1>
+        <p>Elevate Your Story. Literally.</p>
+        <p class="cred">FAA Part 107 Certified Drone Pilot</p>
+        <a href="mailto:hulse.ch@gmail.com" class="cta-button">Get a Quote</a>
+    </div>
+
+</section>
+
+<section class="services">
+    <h2>Services</h2>
+    <div class="service-box">
+        <p><strong>Cinematic Drone Video</strong><br>
+High-quality aerial footage for marketing, events, and storytelling.</p>
+
+<p><strong>Aerial Photography</strong><br>
+Sharp, professional images from unique perspectives.</p>
+
+<p><strong>Real Estate & Commercial</strong><br>
+Showcase properties and businesses with stunning aerial visuals.</p>
+
+<p class="trust">Serving Lubbock and surrounding West Texas areas</p>
+
+<p class="pricing">Starting at $150 per project</p>
+
+</section>
+
+<section class="portfolio">
+  <h2>Portfolio</h2>
+  <div class="portfolio-grid">
+<div class="portfolio-item">
+  <img src="winery.jpg" alt="Winery drone shot" class="portfolio-img">
+  <p>Winery Shoots</p>
+</div>
+    <div class="portfolio-item">Real Estate</div>
+    <div class="portfolio-item">Commercial Projects</div>
+  </div>
+</section>
+
+<section class="about">
+  <h2>About</h2>
+  <p>
+    I'm a FAA Part 107 certified drone pilot based in Lubbock, Texas, focused on capturing cinematic aerial visuals for businesses, real estate, and creative projects. My goal is to deliver clean, professional footage that helps tell your story from a new perspective.
+  </p>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+    <p>Email: hulse.ch@gmail.com</p>
+</section>
+
+<section class="pano-section">
+  <h2>Interactive 360 View</h2>
+  <div id="panorama"></div>
+</section>
+
+<script>
+  pannellum.viewer('panorama', {
+    type: 'equirectangular',
+    panorama: 'assets/pano/park_pano_300ft_auto.jpg',
+    autoLoad: true,
+    showZoomCtrl: true
+  });
+</script>
+
+</body>
+</html>

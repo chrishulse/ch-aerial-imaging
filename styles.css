@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    color: gold;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* SERVICES */
+.services {
+    padding: 60px 20px;
+    background: #111;
+}
+
+/* CONTACT */
+.contact {
+    padding: 40px;
+}
+.cred {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+.portfolio {
+  padding: 60px 20px;
+  background: #0a0a0a;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  background: #1a1a1a;
+  border: 1px solid gold;
+  padding: 30px;
+  min-width: 180px;
+  border-radius: 10px;
+  color: white;
+}
+.portfolio-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}.portfolio-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+.about {
+  padding: 60px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 20px auto;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.pano-section {
+  padding: 60px 20px;
+  background: #0f172a;
+}
+
+.pano-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#panorama {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+}
