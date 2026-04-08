@@ -182,3 +182,37 @@ p {
   border-radius: 12px;
   overflow: hidden;
 }
+/* ===== PRICING HOVER DETAILS ===== */
+
+.pricing-box {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hidden details by default */
+.details {
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Show on hover */
+.pricing-box:hover .details {
+  opacity: 1;
+  max-height: 300px;
+}
+
+/* Slight spacing for lines */
+.details p {
+  margin: 5px 0;
+}
+
+/* Highlight "Best for" */
+.best {
+  margin-top: 10px;
+  font-style: italic;
+  color: gold;
+}
