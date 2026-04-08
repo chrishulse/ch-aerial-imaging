@@ -1,75 +1,79 @@
+/* ===== GLOBAL ===== */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: black;
-    color: white;
-    text-align: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  text-align: center;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
-    width: 220px;
-    margin-bottom: 20px;
+  width: 220px;
+  margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 42px;
-    color: gold;
+  font-size: 42px;
+  color: gold;
 }
 
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
-/* SERVICES */
+/* ===== SERVICES ===== */
 .services {
-    padding: 60px 20px;
-    background: #111;
+  padding: 60px 20px;
+  background: #111;
 }
 
-/* CONTACT */
+/* ===== CONTACT ===== */
 .contact {
-    padding: 40px;
+  padding: 40px;
 }
+
 .cred {
   margin-top: 10px;
   font-size: 14px;
   color: #ccc;
   letter-spacing: 1px;
 }
+
+/* ===== PORTFOLIO ===== */
 .portfolio {
   padding: 60px 20px;
   background: #0a0a0a;
@@ -85,18 +89,10 @@ p {
 .portfolio-item {
   background: #1a1a1a;
   border: 1px solid gold;
-  padding: 30px;
-  min-width: 180px;
+  padding: 20px;
+  min-width: 200px;
   border-radius: 10px;
   color: white;
-}
-.portfolio-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}.portfolio-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -104,6 +100,59 @@ p {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
 }
+
+.portfolio-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.portfolio-video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* ===== PRICING ===== */
+.pricing-section {
+  padding: 60px 20px;
+  background: #111;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.pricing-box {
+  background: #1a1a1a;
+  border: 1px solid gold;
+  border-radius: 10px;
+  padding: 24px;
+  width: 220px;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(255, 215, 0, 0.3);
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: gold;
+}
+
+/* ===== ABOUT ===== */
 .about {
   padding: 60px 20px;
   background: #111;
@@ -117,15 +166,14 @@ p {
   line-height: 1.6;
 }
 
+/* ===== 360 PANO ===== */
 .pano-section {
   padding: 60px 20px;
   background: #0f172a;
 }
 
 .pano-section h2 {
-  text-align: center;
   margin-bottom: 20px;
-  color: white;
 }
 
 #panorama {
@@ -134,28 +182,3 @@ p {
   border-radius: 12px;
   overflow: hidden;
 }
-<section class="pricing-section">
-    <h2>Packages</h2>
-
-    <div class="pricing-grid">
-        
-        <div class="pricing-box">
-            <h3>Basic</h3>
-            <p class="price">$150</p>
-            <p>Quick aerial photos</p>
-        </div>
-
-        <div class="pricing-box">
-            <h3>Standard</h3>
-            <p class="price">$300</p>
-            <p>Photos + short cinematic video</p>
-        </div>
-
-        <div class="pricing-box">
-            <h3>Premium</h3>
-            <p class="price">$500+</p>
-            <p>Full video + 360 pano + editing</p>
-        </div>
-
-    </div>
-</section>
