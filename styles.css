@@ -182,7 +182,7 @@ p {
 .pano-section #panorama,
 #panorama.pnlm-container {
   display: block;
-  width: 100% !important;
+  width: min(100%, 1100px) !important;
   height: 500px !important;
   min-height: 500px !important;
   margin: 2rem auto 3rem !important;
