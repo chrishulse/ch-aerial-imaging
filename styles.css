@@ -216,3 +216,23 @@ p {
   font-style: italic;
   color: gold;
 }
+#panorama {
+  width: 100%;
+  height: 60vh;
+  max-height: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.pano-section {
+  margin-top: 3rem;
+}
+
+#panorama {
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 2rem auto 3rem;
+  background: rgba(255,255,255,0.06);
+}
