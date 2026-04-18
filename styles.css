@@ -167,9 +167,11 @@ p {
 }
 
 /* ===== 360 PANO ===== */
+
 .pano-section {
   padding: 60px 20px;
   background: #0f172a;
+  margin-top: 3rem;
 }
 
 .pano-section h2 {
@@ -179,9 +181,14 @@ p {
 #panorama {
   width: 100%;
   height: 500px;
-  border-radius: 12px;
+  min-height: 500px;
+  display: block;
+  position: relative;
+  border-radius: 16px;
   overflow: hidden;
-}
+  margin: 2rem auto 3rem;
+  background: #111827;
+}}
 /* ===== PRICING HOVER DETAILS ===== */
 
 .pricing-box {
@@ -216,23 +223,7 @@ p {
   font-style: italic;
   color: gold;
 }
-#panorama {
-  width: 100%;
-  height: 60vh;
-  max-height: 700px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.pano-section {
-  margin-top: 3rem;
-}
-
-#panorama {
-  width: 100%;
-  height: 500px;
-  min-height: 500px;
+#panorama canvas,
+#panorama .pnlm-container {
   border-radius: 16px;
-  overflow: hidden;
-  margin: 2rem auto 3rem;
-  background: rgba(255,255,255,0.06);
 }
