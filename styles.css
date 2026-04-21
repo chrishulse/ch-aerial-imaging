@@ -98,13 +98,14 @@ a {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-.hero-brand {
-  margin: 0 0 12px;
-  font-size: 1.15rem;
+.hero-copy-panel .hero-brand {
+  margin: 0 0 14px;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #fbbf24;
+  color: #fbbf24 !important;
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.35);
 }
 
 .hero h1 {
