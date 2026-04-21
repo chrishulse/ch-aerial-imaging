@@ -100,14 +100,15 @@
             text-shadow: 0 2px 12px rgba(0, 0, 0, 0.34);
         }
 
-        .hero-brand {
-            margin: 0 0 14px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: #fbbf24;
-        }
+.hero-brand {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fbbf24 !important;
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.35);
+}
 
         .hero p {
             max-width: 760px;
@@ -290,14 +291,6 @@
                 line-height: 1;
             }
         }
-            .hero-brand {
-                margin: 0 0 14px;
-                font-size: 0.95rem;
-                font-weight: 700;
-                letter-spacing: 0.18em;
-                text-transform: uppercase;
-                color: #fbbf24;
-        }
 
 .hero-copy-panel {
   width: fit-content;
@@ -313,7 +306,7 @@
 }
 
 .hero-brand {
-  margin: 0 0 14px;
+  margin:grep -n "hero-brand" index.html styles.css 0 0 14px;
   font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: 0.22em;
