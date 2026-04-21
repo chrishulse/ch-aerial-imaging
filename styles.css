@@ -88,11 +88,14 @@ a {
   margin: 0 auto 30px;
   padding: 28px 34px 26px;
   border-radius: 18px;
-  background: rgba(12, 22, 44, 0.42);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 24px 70px rgba(2, 6, 23, 0.34);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(10, 20, 40, 0.65);
+
+  /* Frosted glass effect */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .hero-brand {
