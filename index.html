@@ -1,560 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C.H. Aerial Imaging | Cinematic Drone Storytelling</title>
-    <meta name="description" content="FAA Part 107 certified drone pilot based in West Texas, creating cinematic aerial content for businesses, landscapes, events, and visual storytelling.">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+  <title>C.H. Aerial Imaging | FAA-Certified Drone Photography & Video in West Texas</title>
+  <meta name="description" content="FAA Part 107 certified aerial imaging for real estate, commercial, cinematic, and location-based drone projects across West Texas." />
 
-        .hero {
-            position: relative;
-            isolation: isolate;
-            min-height: 78svh;
-            max-width: none;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 96px 20px;
-            overflow: hidden;
-            background: #020617;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
 
-        .hero-video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            z-index: -3;
-            pointer-events: none;
-            background: #020617;
-            animation: heroVideoZoom 22s ease-in-out infinite alternate;
-            transform-origin: center;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        @keyframes heroVideoZoom {
-            from {
-                transform: scale(1);
-            }
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 78svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 96px 20px;
+      overflow: hidden;
+      background: #020617;
+    }
 
-            to {
-                transform: scale(1.045);
-            }
-        }
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -3;
+      pointer-events: none;
+      background: #020617;
+      animation: heroVideoZoom 22s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
 
-        @media (prefers-reduced-motion: reduce) {
-            .hero-video {
-                animation: none;
-            }
-        }
+    @keyframes heroVideoZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.045); }
+    }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -2;
-            background:
-                radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.10), transparent 30%),
-                linear-gradient(180deg, rgba(2, 6, 23, 0.30) 0%, rgba(2, 6, 23, 0.40) 42%, rgba(2, 6, 23, 0.78) 100%),
-                linear-gradient(90deg, rgba(2, 6, 23, 0.36), rgba(2, 6, 23, 0.06) 45%, rgba(2, 6, 23, 0.36));
-        }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-video {
+        animation: none;
+      }
+    }
 
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            background: rgba(2, 6, 23, 0.10);
-        }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.10), transparent 30%),
+        linear-gradient(180deg, rgba(2, 6, 23, 0.30) 0%, rgba(2, 6, 23, 0.40) 42%, rgba(2, 6, 23, 0.78) 100%),
+        linear-gradient(90deg, rgba(2, 6, 23, 0.36), rgba(2, 6, 23, 0.06) 45%, rgba(2, 6, 23, 0.36));
+    }
 
-        .hero-content {
-            width: min(900px, 100%);
-            margin: 0 auto;
-        }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba(2, 6, 23, 0.10);
+    }
 
-        .hero h1 {
-            max-width: 860px;
-            margin: 0 auto 18px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 5rem;
-            line-height: 0.96;
-            font-weight: 700;
-            letter-spacing: 0;
-            color: #fffaf0;
-            -webkit-text-stroke: 1.2px rgba(0, 0, 0, 0.42);
-            paint-order: stroke fill;
-            text-shadow:
-              0 2px 0 rgba(0, 0, 0, 0.22),
-              0 8px 18px rgba(0, 0, 0, 0.34),
-              0 18px 38px rgba(0, 0, 0, 0.28);
-        }
+    .hero-content {
+      width: min(980px, 100%);
+      margin: 0 auto;
+    }
 
-.hero-brand {
-  margin: 0 0 14px;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #fbbf24 !important;
-  text-shadow: 0 0 12px rgba(251, 191, 36, 0.35);
-}
+    .hero-copy-panel {
+      width: fit-content;
+      max-width: 980px;
+      margin: 0 auto 36px;
+      padding: 30px 36px;
+      border-radius: 20px;
+      background: rgba(255, 248, 230, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.22);
+    }
 
-        .hero p {
-            max-width: 760px;
-            margin: 0 auto 30px;
-            font-size: 1.14rem;
-            color: #f1f5f9;
-            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.58);
-        }
+    .hero-brand {
+      margin: 0 0 14px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.35),
+        0 8px 18px rgba(251, 191, 36, 0.28);
+    }
 
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+    .hero h1 {
+      max-width: 900px;
+      margin: 0 auto 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 4.3rem;
+      line-height: 1;
+      font-weight: 700;
+      color: #fffaf0;
+      -webkit-text-stroke: 1.2px rgba(0, 0, 0, 0.42);
+      paint-order: stroke fill;
+      text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.22),
+        0 8px 18px rgba(0, 0, 0, 0.34),
+        0 18px 38px rgba(0, 0, 0, 0.28);
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: transform 0.24s ease, background-color 0.24s ease, color 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
-        }
+    .hero-sub {
+      margin: 10px 0 0;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1e293b;
+      font-weight: 700;
+    }
 
-        .btn-primary {
-            background: #fbbf24;
-            color: #0f172a;
-            box-shadow: 0 10px 28px rgba(251, 191, 36, 0.34);
-        }
+    .hero-description {
+      max-width: 760px;
+      margin: 18px auto 0;
+      font-size: 1.08rem;
+      color: #1e293b;
+      font-weight: 600;
+    }
 
-        .btn-primary:hover {
-            background: #fde047;
-            transform: translateY(-2px);
-            box-shadow: 0 14px 34px rgba(251, 191, 36, 0.42);
-        }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-        .btn-secondary {
-            border: 2px solid rgba(255, 255, 255, 0.72);
-            color: #f8fafc;
-            background: rgba(2, 6, 23, 0.20);
-        }
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.24s ease, background-color 0.24s ease, color 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+    }
 
-        .btn-secondary:hover {
-            background: white;
-            color: #0f172a;
-            transform: translateY(-2px);
-            border-color: white;
-            box-shadow: 0 10px 26px rgba(2, 6, 23, 0.24);
-        }
+    .btn-primary {
+      background: #fbbf24;
+      color: #0f172a;
+      box-shadow: 0 10px 28px rgba(251, 191, 36, 0.34);
+    }
 
-        section {
-            padding: 70px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+    .btn-primary:hover {
+      background: #fde047;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(251, 191, 36, 0.42);
+    }
 
-        h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+    .btn-secondary {
+      border: 2px solid rgba(255, 255, 255, 0.72);
+      color: #f8fafc;
+      background: rgba(2, 6, 23, 0.20);
+    }
 
-        .section-intro {
-            text-align: center;
-            max-width: 760px;
-            margin: 0 auto 40px;
-            color: #cbd5e1;
-        }
+    .btn-secondary:hover {
+      background: white;
+      color: #0f172a;
+      transform: translateY(-2px);
+      border-color: white;
+      box-shadow: 0 10px 26px rgba(2, 6, 23, 0.24);
+    }
 
-        .pricing-note {
-            text-align: center;
-            margin-top: 30px;
-        }
+    .trust-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 22px 20px 0;
+    }
 
-        .video-box {
-            background: #1e293b;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-        }
+    .trust-item {
+      background: #1e293b;
+      border: 1px solid rgba(251, 191, 36, 0.25);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      color: #f8fafc;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+    }
 
-        .video-box video {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            display: block;
-            object-fit: cover;
-            background: #020617;
-        }
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-        .video-caption {
-            padding: 20px;
-        }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
+    .section-intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+      color: #cbd5e1;
+    }
 
-        .card {
-            background: #1e293b;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-        }
+    .pricing-note {
+      text-align: center;
+      margin-top: 30px;
+      color: #cbd5e1;
+    }
 
-        .card h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #f8fafc;
-        }
+    .video-box {
+      background: #1e293b;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
 
-        .card p {
-            color: #cbd5e1;
-            margin: 0;
-        }
+    .video-box video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      object-fit: cover;
+      background: #020617;
+    }
 
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
-            align-items: start;
-        }
+    .video-caption {
+      padding: 20px;
+    }
 
-        .about-box {
-            background: #1e293b;
-            padding: 28px;
-            border-radius: 12px;
-            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-        }
+    .video-caption p {
+      color: #cbd5e1;
+    }
 
-        .about-box p {
-            color: #cbd5e1;
-        }
+    .pano-section {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-        .contact {
-            text-align: center;
-            background: #111827;
-            border-radius: 14px;
-            padding: 45px 25px;
-        }
+    .pano-frame {
+      width: 100%;
+      height: 640px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
 
-        .contact p {
-            max-width: 700px;
-            margin: 0 auto 24px;
-            color: #cbd5e1;
-        }
+    .pano-frame iframe {
+      width: 100%;
+      height: 640px;
+      border: 0;
+      display: block;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
 
-        @media (max-width: 768px) {
-            .hero {
-                min-height: 72svh;
-                padding: 78px 18px;
-            }
+    .card {
+      background: #1e293b;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
 
-            .hero h1 {
-                font-size: 2.55rem;
-                line-height: 1.02;
-            }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #f8fafc;
+    }
 
-            .hero p {
-                font-size: 1.02rem;
-            }
+    .card p,
+    .card li {
+      color: #cbd5e1;
+    }
 
-            .about {
-                grid-template-columns: 1fr;
-            }
-        }
+    .card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
 
-        @media (max-width: 980px) and (min-width: 769px) {
-            .hero h1 {
-                font-size: 3.7rem;
-                line-height: 1;
-            }
-        }
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: start;
+    }
 
-.hero-copy-panel {
-  width: fit-content;
-  max-width: 900px;
-  margin: 0 auto 36px;
-  padding: 30px 36px;
-  border-radius: 20px;
-  background: rgba(255, 248, 230, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.22);
-}
+    .about-box {
+      background: #1e293b;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
 
-.hero-brand {
-  margin: 0 0 14px;
-  font-size: 1.08rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #fbbf24;
-  text-shadow:
-  0 2px 6px rgba(0, 0, 0, 0.35),
-  0 8px 18px rgba(251, 191, 36, 0.28);
-}
+    .about-box p {
+      color: #cbd5e1;
+    }
 
-.hero-sub {
-  margin: 10px 0 14px;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.82);
-}
+    .contact {
+      text-align: center;
+      background: #111827;
+      border-radius: 14px;
+      padding: 45px 25px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
 
-.hero p {
-  max-width: 760px;
-  margin: 10px auto 0;
-  font-size: 1.08rem;
-  color: #f1f5f9;
--webkit-text-stroke: 0.35px rgba(0, 0, 0, 0.45);
-text-shadow:
-  0 2px 6px rgba(0, 0, 0, 0.35),
-  0 8px 18px rgba(0, 0, 0, 0.24);
-}
+    .contact p {
+      max-width: 700px;
+      margin: 0 auto 24px;
+      color: #cbd5e1;
+    }
 
-    </style>
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
-<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    .step {
+      background: #1e293b;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
 
+    .step h3 {
+      margin-top: 0;
+      color: #f8fafc;
+    }
+
+    .step p {
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 72svh;
+        padding: 78px 18px;
+      }
+
+      .hero-copy-panel {
+        padding: 24px 22px;
+      }
+
+      .hero h1 {
+        font-size: 2.35rem;
+        line-height: 1.04;
+      }
+
+      .hero-brand {
+        font-size: 0.92rem;
+        letter-spacing: 0.16em;
+      }
+
+      .hero-sub {
+        font-size: 0.78rem;
+      }
+
+      .hero-description {
+        font-size: 0.98rem;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .pano-frame,
+      .pano-frame iframe {
+        height: 460px;
+      }
+    }
+
+    @media (max-width: 980px) and (min-width: 769px) {
+      .hero h1 {
+        font-size: 3.35rem;
+        line-height: 1;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="poster.jpg" aria-hidden="true" tabindex="-1">
-            <source src="video-optimized.mp4" type="video/mp4">
-        </video>
-<div class="hero-content">
-  <div class="hero-copy-panel">
-    <p class="hero-brand">C.H. Aerial Imaging</p>
-    <h1>Elevated Cinematic Storytelling from the Skies</h1>
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="poster.jpg" aria-hidden="true" tabindex="-1">
+      <source src="video-optimized.mp4" type="video/mp4" />
+    </video>
 
-<div class="faa-badge">
-  FAA PART 107<br>
-  CERTIFIED<br>
-  DRONE PILOT
-</div>
+    <div class="hero-content">
+      <div class="hero-copy-panel">
+        <p class="hero-brand">C.H. Aerial Imaging</p>
 
-<p class="hero-sub">
-  Based in West Texas • Available for Travel
-</p>
-  </div>
+        <h1>FAA-Certified Aerial Imaging for Real Estate, Business, and Cinematic Projects in West Texas</h1>
 
-  <div class="buttons">
-    <a href="#portfolio" class="btn btn-primary">View My Work</a>
-    <a href="#intake" class="btn btn-secondary">Book a Project</a>
-  </div>
-</div>
-    </section>
-
-    <section id="portfolio">
-        <h2>Featured Work</h2>
-        <p class="section-intro">
-            A growing portfolio of cinematic aerial visuals built around storytelling, atmosphere,
-            and strong composition from above.
+        <p class="hero-sub">
+          FAA Part 107 Certified • Based in West Texas • Available for Travel
         </p>
 
-        <div class="video-box">
-            <video muted loop playsinline preload="metadata" poster="poster.jpg">
-                <source src="video-optimized.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-caption">
-                <h3>Winery Flyover</h3>
-                <p>
-                    A cinematic aerial pass capturing the feel, layout, and natural setting of a West Texas winery.
-                    Built to showcase motion, mood, and visual storytelling rather than just altitude.
-                </p>
-            </div>
-        </div>
+        <p class="hero-description">
+          Professional drone photography, cinematic video, property visuals, and aerial storytelling built with safety, clarity, and strong visual composition.
+        </p>
+      </div>
 
-<section class="pano-section">
-  <h2>SPC Campus Aerial Experience</h2>
+      <div class="buttons">
+        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+        <a href="#contact" class="btn btn-secondary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
 
-  <div style="width: 100%; height: 640px; border-radius: 16px; overflow: hidden;">
-
-<iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/LPg0f?logo=1&card=1&info=0&logosize=200&fs=1&vr=1&sd=1&initload=0&autorotate=-0.01&thumbs=1&margin=7&alpha=0.64"></iframe>
-
+  <div class="trust-bar">
+    <div class="trust-item">FAA Part 107 Certified</div>
+    <div class="trust-item">West Texas Based</div>
+    <div class="trust-item">Real Estate • Commercial • Cinematic</div>
+    <div class="trust-item">Digital Media Delivery</div>
   </div>
 
-</section>
+  <section id="portfolio">
+    <h2>Featured Work</h2>
 
-        <div class="cards">
-            <div class="card">
-                <h3>Commercial Aerial Content</h3>
-                <p>Promotional drone visuals for businesses, venues, and branded storytelling.</p>
-            </div>
-            <div class="card">
-                <h3>Landscape Cinematics</h3>
-                <p>Atmospheric aerial footage built around natural beauty, texture, scale, and movement.</p>
-            </div>
-            <div class="card">
-                <h3>Property and Location Views</h3>
-                <p>Clean, cinematic perspectives for land, sites, and destination-based visual presentation.</p>
-            </div>
-            <div class="card">
-                <h3>Documentary-Style Visuals</h3>
-                <p>Purpose-driven drone work shaped by story, pacing, and the feeling of place.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About</h2>
-        <div class="about">
-            <div class="about-box">
-                <h3>Who I Am</h3>
-                <p>
-                    I’m Chris Hulse, an FAA Part 107 certified drone pilot based in West Texas and a cinematography student
-                    building a body of work around cinematic aerial storytelling. My focus is not just flying, but creating
-                    visuals that feel intentional, immersive, and memorable.
-                </p>
-            </div>
-            <div class="about-box">
-                <h3>Where I’m Headed</h3>
-                <p>
-                    I’m developing commercial, landscape, and documentary-style drone content while building toward larger
-                    storytelling opportunities in wildlife, exploration, and visual journalism. This journey is part of a
-                    bigger mission: Operation Nat Geo.                </p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="services">
-    <h2>Services</h2>
     <p class="section-intro">
-        Professional drone services designed to capture cinematic visuals and deliver high-value content tailored to your project.
+      A growing portfolio of cinematic aerial visuals built around professional presentation, atmosphere, movement, and strong composition from above.
+    </p>
+
+    <div class="video-box">
+      <video muted loop playsinline preload="metadata" poster="poster.jpg">
+        <source src="video-optimized.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="video-caption">
+        <h3>Winery Flyover</h3>
+        <p>
+          A cinematic aerial pass capturing the feel, layout, and natural setting of a West Texas winery.
+          Built to showcase motion, mood, and visual storytelling rather than just altitude.
+        </p>
+      </div>
+    </div>
+
+    <section class="pano-section">
+      <h2>SPC Campus Aerial Experience</h2>
+
+      <div class="pano-frame">
+        <iframe
+          allow="xr-spatial-tracking; gyroscope; accelerometer"
+          allowfullscreen
+          scrolling="no"
+          src="https://kuula.co/share/LPg0f?logo=1&card=1&info=0&logosize=200&fs=1&vr=1&sd=1&initload=0&autorotate=-0.01&thumbs=1&margin=7&alpha=0.64">
+        </iframe>
+      </div>
+    </section>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Commercial Aerial Content</h3>
+        <p>Promotional drone visuals for businesses, venues, and branded storytelling.</p>
+      </div>
+
+      <div class="card">
+        <h3>Landscape Cinematics</h3>
+        <p>Atmospheric aerial footage built around natural beauty, texture, scale, and movement.</p>
+      </div>
+
+      <div class="card">
+        <h3>Property and Location Views</h3>
+        <p>Clean, cinematic perspectives for real estate, land, sites, and destination-based visual presentation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Documentary-Style Visuals</h3>
+        <p>Purpose-driven drone work shaped by story, pacing, and the feeling of place.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+
+    <div class="about">
+      <div class="about-box">
+        <h3>Professional Aerial Imaging</h3>
+        <p>
+          I’m Chris Hulse, an FAA Part 107 certified drone pilot and cinematographer based in West Texas.
+          C.H. Aerial Imaging creates professional aerial visuals for real estate, commercial projects,
+          landscapes, and cinematic storytelling.
+        </p>
+
+        <p>
+          My approach combines technical flight safety with cinematic composition to create visuals that
+          feel intentional, immersive, and visually memorable.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <h3>Mission & Visual Style</h3>
+        <p>
+          C.H. Aerial Imaging is built around cinematic aerial storytelling rooted in atmosphere, movement,
+          and strong visual composition. From land and business promotion to documentary-inspired visuals,
+          each project is designed to showcase location, scale, and emotion from above.
+        </p>
+
+        <p>
+          Based in West Texas and available for travel.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+
+    <p class="section-intro">
+      Professional drone services designed to capture cinematic visuals and deliver high-value content tailored to your project.
     </p>
 
     <div class="cards">
-        <div class="card">
-            <h3>Starter Package</h3>
-            <p><strong>Starting at $150</strong></p>
-            <p>Ideal for quick visuals and smaller properties.</p>
-            <ul>
-                <li>10–15 aerial photos</li>
-                <li>1 short cinematic clip</li>
-                <li>24–48 hour delivery</li>
-            </ul>
-        </div>
+      <div class="card">
+        <h3>Real Estate Aerial Package</h3>
+        <p><strong>Starting at $250</strong></p>
+        <p>Ideal for listings, land, exterior property marketing, and quick professional aerial visuals.</p>
+        <ul>
+          <li>15–25 edited aerial photos</li>
+          <li>Property-focused flight coverage</li>
+          <li>MLS and social media friendly delivery</li>
+          <li>Digital delivery</li>
+        </ul>
+      </div>
 
-        <div class="card">
-            <h3>Cinematic Package</h3>
-            <p><strong>Starting at $300</strong></p>
-            <p>Perfect for businesses and premium listings.</p>
-            <ul>
-                <li>20–30 aerial photos</li>
-                <li>1 edited cinematic video (30–60 sec)</li>
-                <li>Optional vertical social clips</li>
-            </ul>
-        </div>
+      <div class="card">
+        <h3>Commercial Cinematic Package</h3>
+        <p><strong>Starting at $450</strong></p>
+        <p>Designed for businesses, venues, wineries, premium listings, and promotional media.</p>
+        <ul>
+          <li>20–30 edited aerial photos</li>
+          <li>Edited cinematic video, 30–60 seconds</li>
+          <li>Color correction and cinematic pacing</li>
+          <li>Optional vertical social clips</li>
+        </ul>
+      </div>
 
-        <div class="card">
-            <h3>Immersive Package</h3>
-            <p><strong>Custom Quote</strong></p>
-            <p>Advanced visual storytelling and interactive experiences.</p>
-            <ul>
-                <li>Everything in Cinematic Package</li>
-                <li>360° aerial panorama / virtual tour</li>
-                <li>Enhanced color grading</li>
-                <li>Priority delivery</li>
-            </ul>
-        </div>
+      <div class="card">
+        <h3>Premium Storytelling Package</h3>
+        <p><strong>Custom Quote</strong></p>
+        <p>Advanced visual storytelling and interactive aerial experiences for larger creative or commercial projects.</p>
+        <ul>
+          <li>Multi-location or extended shoot coverage</li>
+          <li>360° aerial panorama / virtual tour options</li>
+          <li>Enhanced color grading</li>
+          <li>Priority delivery options</li>
+        </ul>
+      </div>
     </div>
 
     <p class="pricing-note">
-        Every project is unique. Pricing may vary based on location, scope, and deliverables.
+      Every project is unique. Pricing may vary based on location, airspace, scope, timeline, travel, and final deliverables.
     </p>
-</section>
+  </section>
 
-<section id="intake" class="intake-section">
-  <h2>Book a Project</h2>
-  <p class="section-intro">
-    Tell me about your project, location, timeline, and deliverables.
-    I’ll review the details and follow up with a quote.
-  </p>
+  <section id="contact">
+    <div class="contact">
+      <h2>Request a Quote</h2>
 
-  <div class="form-wrapper">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdGX9FqaYNuTbm59QpspmLlSHl2w7rqeQi2XCkbPcKlaxzRzw/viewform?embedded=true" width="100%" height="3325" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <p>
+        Tell me about your project, location, timeline, and desired deliverables.
+        I’ll review airspace, weather, safety, logistics, and creative goals before responding with next steps.
+      </p>
 
-  </div>
-</section>
-
-    <section id="contact">
-        <div class="contact">
-            <h2>Let’s Create Something From Above</h2
-            <p>
-                Available for aerial content projects, business promotions, landscapes, special locations, and visual storytelling work.
-                Based in West Texas and open to travel for the right project.
-            </p>
-            <a href="mailto:ch.aerial.imaging@gmail.com" class="btn btn-primary">Contact Me</a>
-        </div>
-    </section>
-
-<section class="next-steps">
-  <h2>What Happens Next?</h2>
-  <div class="steps-grid">
-    <div class="step">
-      <h3>1. Submit Project Details</h3>
-      <p>Share the location, timeline, deliverables, and project goal.</p>
+      <a href="mailto:ch.aerial.imaging@gmail.com?subject=C.H.%20Aerial%20Project%20Quote%20Request" class="btn btn-primary">
+        Email for a Quote
+      </a>
     </div>
-    <div class="step">
-      <h3>2. Location Review</h3>
-      <p>I review airspace, access, weather, safety, and shoot requirements.</p>
-    </div>
-    <div class="step">
-      <h3>3. Quote & Scheduling</h3>
-      <p>You’ll receive a quote or follow-up questions before the project is confirmed.</p>
-    </div>
-    <div class="step">
-      <h3>4. Shoot & Delivery</h3>
-      <p>After the flight and editing process, final media is delivered digitally.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-    <footer>
-        © 2026 C.H. Aerial Imaging | FAA Part 107 Certified Drone Pilot
-    </footer>
+  <section class="next-steps">
+    <h2>What Happens Next?</h2>
 
-<script>
-  pannellum.viewer('panorama', {
-    type: 'multires',
-    panorama: 'images/spc-campus-360.jpg',
-    autoLoad: true,
-    showZoomCtrl: true,
-    compass: false
-  });
-</script>
+    <div class="steps-grid">
+      <div class="step">
+        <h3>1. Submit Project Details</h3>
+        <p>Share the location, timeline, deliverables, and project goal.</p>
+      </div>
+
+      <div class="step">
+        <h3>2. Location Review</h3>
+        <p>I review airspace, access, weather, safety, and shoot requirements.</p>
+      </div>
+
+      <div class="step">
+        <h3>3. Quote & Scheduling</h3>
+        <p>You’ll receive a quote or follow-up questions before the project is confirmed.</p>
+      </div>
+
+      <div class="step">
+        <h3>4. Shoot & Delivery</h3>
+        <p>After the flight and editing process, final media is delivered digitally.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 C.H. Aerial Imaging | FAA Part 107 Certified Drone Pilot | West Texas Aerial Imaging
+  </footer>
 
 </body>
 </html>
