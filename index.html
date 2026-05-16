@@ -21,6 +21,46 @@
       text-decoration: none;
     }
 
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(251, 191, 36, 0.22);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      color: #fbbf24;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.92rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+    }
+
+    .nav-links a:hover {
+      color: #fbbf24;
+    }
+
     .hero {
       position: relative;
       isolation: isolate;
@@ -300,6 +340,31 @@
       margin-bottom: 0;
     }
 
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .proof-card {
+      background: #111827;
+      border: 1px solid rgba(251, 191, 36, 0.18);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .proof-card h3 {
+      margin-top: 0;
+      color: #fbbf24;
+    }
+
+    .proof-card p {
+      color: #cbd5e1;
+      margin-bottom: 0;
+    }
+
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -330,6 +395,17 @@
       max-width: 700px;
       margin: 0 auto 24px;
       color: #cbd5e1;
+    }
+
+    .quote-list {
+      max-width: 640px;
+      margin: 0 auto 28px;
+      text-align: left;
+      color: #cbd5e1;
+    }
+
+    .quote-list li {
+      margin-bottom: 8px;
     }
 
     .steps-grid {
@@ -363,6 +439,16 @@
     }
 
     @media (max-width: 768px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px;
+        font-size: 0.9rem;
+      }
+
       .hero {
         min-height: 72svh;
         padding: 78px 18px;
@@ -411,7 +497,21 @@
 
 <body>
 
-  <section class="hero">
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">C.H. Aerial Imaging</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#portfolio">Work</a>
+        <a href="#trust">Why Hire Me</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" class="hero">
     <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="poster.jpg" aria-hidden="true" tabindex="-1">
       <source src="video-optimized.mp4" type="video/mp4" />
     </video>
@@ -503,6 +603,48 @@
     </div>
   </section>
 
+  <section id="trust">
+    <h2>Why Clients Hire C.H. Aerial</h2>
+
+    <p class="section-intro">
+      Professional aerial work requires more than a good-looking drone shot. Each project is approached with safety, planning, visual intention, and a clear delivery process.
+    </p>
+
+    <div class="proof-grid">
+      <div class="proof-card">
+        <h3>Certified Flight Operations</h3>
+        <p>
+          FAA Part 107 certified drone pilot with project planning built around airspace, weather, access, and safe flight conditions.
+        </p>
+      </div>
+
+      <div class="proof-card">
+        <h3>Cinematic Composition</h3>
+        <p>
+          Every flight is shaped around movement, light, scale, and visual storytelling — not just getting a camera into the air.
+        </p>
+      </div>
+
+      <div class="proof-card">
+        <h3>Clear Project Workflow</h3>
+        <p>
+          Projects move through quote review, location planning, scheduled flight, editing, and digital delivery.
+        </p>
+      </div>
+
+      <div class="proof-card">
+        <h3>West Texas Focus</h3>
+        <p>
+          Based in West Texas and built for real estate, land, business, venue, and cinematic location-based projects.
+        </p>
+      </div>
+    </div>
+
+    <p class="pricing-note">
+      Insurance requirements, airspace limitations, travel needs, and special permissions can be reviewed during project planning.
+    </p>
+  </section>
+
   <section id="about">
     <h2>About</h2>
 
@@ -586,22 +728,7 @@
     </p>
   </section>
 
-  <section id="contact">
-    <div class="contact">
-      <h2>Request a Quote</h2>
-
-      <p>
-        Tell me about your project, location, timeline, and desired deliverables.
-        I’ll review airspace, weather, safety, logistics, and creative goals before responding with next steps.
-      </p>
-
-      <a href="mailto:ch.aerial.imaging@gmail.com?subject=C.H.%20Aerial%20Project%20Quote%20Request" class="btn btn-primary">
-        Email for a Quote
-      </a>
-    </div>
-  </section>
-
-  <section class="next-steps">
+  <section id="process" class="next-steps">
     <h2>What Happens Next?</h2>
 
     <div class="steps-grid">
@@ -624,6 +751,32 @@
         <h3>4. Shoot & Delivery</h3>
         <p>After the flight and editing process, final media is delivered digitally.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Request a Quote</h2>
+
+      <p>
+        For the fastest quote, include a few key details in your message:
+      </p>
+
+      <ul class="quote-list">
+        <li>Project location or property address</li>
+        <li>Type of project: real estate, commercial, land, venue, or cinematic</li>
+        <li>Desired deliverables: photos, video, 360° panorama, or custom package</li>
+        <li>Ideal timeline or deadline</li>
+        <li>Any access, airspace, or scheduling concerns</li>
+      </ul>
+
+      <p>
+        I’ll review airspace, weather, safety, logistics, and creative goals before responding with next steps.
+      </p>
+
+      <a href="mailto:ch.aerial.imaging@gmail.com?subject=C.H.%20Aerial%20Project%20Quote%20Request" class="btn btn-primary">
+        Email for a Quote
+      </a>
     </div>
   </section>
 
